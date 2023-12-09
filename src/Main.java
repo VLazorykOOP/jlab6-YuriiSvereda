@@ -9,12 +9,19 @@ public class Main {
         boolean exit = false;
         while(!exit) {
             System.out.println("choose task:");
-            System.out.println("1. Task1;\n2. Task2.");
+            System.out.println("11/2 Task1.1/2;\n2. Task2.");
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             switch (choice) {
-                case 1:
+                case 11:
                     new MovingStrings();
+                    break;
+                case 12:
+                    try {
+                    RandomStringMovement.test();
+                    }catch (InterruptedException exception){
+                        System.out.println("GFYS");
+                    }
                     break;
                 case 2:
                     SwingUtilities.invokeLater(new Runnable() {
@@ -23,7 +30,6 @@ public class Main {
                         }
                     });
                     break;
-
                 case -1:
                     exit = true;
                 default:
